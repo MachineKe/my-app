@@ -35,8 +35,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd ..
-          cd ..
+          cd ../../
+          
           ls
           npm ci
 
@@ -48,14 +48,14 @@ jobs:
 
       - name: Run component tests
         run: |
-          cd ..
-          cd ..
+          cd ../../
+          
           npm run test
 
       - name: Start the app
         run: |
-          cd ..
-          cd ..
+          cd ../../
+          
           npm install wait-on
           npm start &
           npx wait-on http://localhost:3000 --timeout 60000
