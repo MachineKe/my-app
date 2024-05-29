@@ -35,22 +35,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd my-app
+          cd react-test
           npm ci
 
       - name: Build the app
         run: |
-          cd my-app
+          cd react-test
           npm run build
 
       - name: Run component tests
         run: |
-          cd my-app
+          cd react-test
           npm run test
 
       - name: Start the app
         run: |
-          cd my-app
+          cd react-test
           npm install wait-on
           npm start &
           npx wait-on http://localhost:3000 --timeout 60000
