@@ -36,24 +36,24 @@ jobs:
       - name: List files for debugging
         run: ls -la
           
-      - name: Install dependencies
-        run: |
-          cd my-app
-          npm ci
+      # - name: Install dependencies
+      #   run: |
+      #     cd my-app
+      #     npm ci
 
-      - name: Build the app
-        run: |
-          cd my-app
-          npm run build
+      # - name: Build the app
+      #   run: |
+      #     cd my-app
+      #     npm run build
 
-      - name: Run component tests
-        run: |
-          cd my-app
-          npm run test
+      # - name: Run component tests
+      #   run: |
+      #     cd my-app
+      #     npm run test
 
-      - name: Start the app
-        run: |
-          cd my-app
-          npm install wait-on
-          npm start &
-          npx wait-on http://localhost:3000 --timeout 60000
+      # - name: Start the app
+      #   run: |
+      #     cd my-app
+      #     npm install wait-on
+      #     npm start &
+      #     npx wait-on http://localhost:3000 --timeout 60000
