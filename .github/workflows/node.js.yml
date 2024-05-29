@@ -40,17 +40,17 @@ jobs:
 
       - name: Build the app
         run: |
-          cd react-test
+          cd .
           npm run build
 
       - name: Run component tests
         run: |
-          cd react-test
+          cd .
           npm run test
 
       - name: Start the app
         run: |
-          cd react-test
+          cd .
           npm install wait-on
           npm start &
           npx wait-on http://localhost:3000 --timeout 60000
